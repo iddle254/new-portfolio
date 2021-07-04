@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
+import "./assets/centaur.scss";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";

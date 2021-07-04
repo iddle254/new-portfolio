@@ -1,6 +1,6 @@
 import React from "react";
 // nodejs library that concatenates classes
-import classNames from "classnames";
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -8,152 +8,48 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // core components
 import GridContainer from "./GridContainer.js";
-import GridItem from "./GridItem.js";
-import Button from "./Button.js";
-import Card from "./Card.js";
-import CardBody from "./CardBody.js";
-import CardFooter from "./CardFooter.js";
 
 import styles from "../../assets/teamStyle.js";
 
-import team1 from "../../assets/Centaur.png";
-import team2 from "../../assets/Centaur.png";
-import team3 from "../../assets/Centaur.png";
+import charles from "../../assets/me32.jpg";
+import sam from "../../assets/sam.jpg";
+import TeamComponent from "./TeamComponent.js";
 
 const useStyles = makeStyles(styles);
 
 export default function TeamSection() {
   const classes = useStyles();
-  const imageClasses = classNames(
-    classes.imgRaised,
-    classes.imgRoundedCircle,
-    classes.imgFluid
-  );
+
+  const profiles = [
+    {
+      name: "Charles Motaroki",
+      title: "Software Engineer",
+      image: { charles },
+      description:
+        "Driven, motivated and ambitious. We couldn't recommend anyone better to handle your ...",
+    },
+    {
+      name: "Sam Motaroki",
+      title: "Frontend Engineer",
+      image: { sam },
+      description:
+        "Driven, motivated and ambitious. We couldn't recommend anyone better to handle your ...",
+    },
+  ];
   return (
     <div className={classes.section}>
       <h2 className={classes.title}>Who we are</h2>
       <div>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
-            <Card plain>
-              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={team1} alt="..." className={imageClasses} />
-              </GridItem>
-              <h4 className={classes.cardTitle}>
-                Charles Motaroki
-                <br />
-                <small className={classes.smallTitle}>Software engineer</small>
-              </h4>
-              <CardBody>
-                <p className={classes.description}>
-                  Driven, motivated and ambitious. We couldn't recommend any one
-                  better to handle your ....
-                </p>
-              </CardBody>
-              <CardFooter className={classes.justifyCenter}>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-twitter"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-instagram"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-facebook"} />
-                </Button>
-              </CardFooter>
-            </Card>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <Card plain>
-              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={team2} alt="..." className={imageClasses} />
-              </GridItem>
-              <h4 className={classes.cardTitle}>
-                Christian Louboutin
-                <br />
-                <small className={classes.smallTitle}>Designer</small>
-              </h4>
-              <CardBody>
-                <p className={classes.description}>
-                  You can write here details about one of your team members. You
-                  can give more details about what they do. Feel free to add
-                  some <a href="#pablo">links</a> for people to be able to
-                  follow them outside the site.
-                </p>
-              </CardBody>
-              <CardFooter className={classes.justifyCenter}>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-twitter"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-linkedin"} />
-                </Button>
-              </CardFooter>
-            </Card>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <Card plain>
-              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={team3} alt="..." className={imageClasses} />
-              </GridItem>
-              <h4 className={classes.cardTitle}>
-                Kendall Jenner
-                <br />
-                <small className={classes.smallTitle}>Model</small>
-              </h4>
-              <CardBody>
-                <p className={classes.description}>
-                  You can write here details about one of your team members. You
-                  can give more details about what they do. Feel free to add
-                  some <a href="#pablo">links</a> for people to be able to
-                  follow them outside the site.
-                </p>
-              </CardBody>
-              <CardFooter className={classes.justifyCenter}>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-twitter"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-instagram"} />
-                </Button>
-                <Button
-                  justIcon
-                  color="transparent"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-facebook"} />
-                </Button>
-              </CardFooter>
-            </Card>
-          </GridItem>
+          {/* <TeamComponent name="Sam Motaroki" title="Frontend Engineer" image={sam} description="Driven, motivated and ambitious. We couldn't recommend anyone better to handle your ..."/> */}
+          {profiles.map((profile) => (
+            <TeamComponent
+              name={profile.name}
+              title={profile.title}
+              image={profile.image}
+              description={profile.description}
+            />
+          ))}
         </GridContainer>
       </div>
     </div>

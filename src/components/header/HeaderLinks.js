@@ -28,7 +28,7 @@ export default function HeaderLinks(props) {
   const classes = useStyles();
   return (
     <List className={classes.list}>
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <Button
           href="/services"
           color="transparent"
@@ -37,12 +37,12 @@ export default function HeaderLinks(props) {
         >
           <BuildIcon className={classes.icons} /> Services
         </Button>
-      </ListItem>
+      </ListItem> */}
       <ListItem className={classes.listItem}>
         <Button
           href="/about"
           color="transparent"
-          target="_blank"
+          // target="_blank"
           className={classes.navLink}
         >
           <CodeIcon className={classes.icons} /> About
@@ -52,7 +52,7 @@ export default function HeaderLinks(props) {
         <Button
           href="/blog"
           color="transparent"
-          target="_blank"
+          // target="_blank"
           className={classes.navLink}
         >
           <BookIcon className={classes.icons} /> Blog
@@ -95,13 +95,13 @@ export default function HeaderLinks(props) {
             <Link to="/" className={classes.dropdownLink}>
               Book exchange
             </Link>,
-            <a
-              href="https://creativetimofficial.github.io/material-kit-react/#/documentation?ref=mkr-navbar"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              Allan ecom
-            </a>,
+            // <a
+            //   href="https://creativetimofficial.github.io/material-kit-react/#/documentation?ref=mkr-navbar"
+            //   target="_blank"
+            //   className={classes.dropdownLink}
+            // >
+            //   Allan ecom
+            // </a>,
           ]}
         />
       </ListItem>
@@ -128,8 +128,8 @@ export default function HeaderLinks(props) {
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
-            href="https://twitter.com/CreativeTim?ref=creativetim"
-            target="_blank"
+            href="/"
+            // target="_blank"
             color="transparent"
             className={classes.navLink}
           >
@@ -146,8 +146,8 @@ export default function HeaderLinks(props) {
         >
           <Button
             color="transparent"
-            href="https://www.facebook.com/CreativeTim?ref=creativetim"
-            target="_blank"
+            href="/"
+            // target="_blank"
             className={classes.navLink}
           >
             <i className={classes.socialIcons + " fab fa-facebook"} />
@@ -163,8 +163,8 @@ export default function HeaderLinks(props) {
         >
           <Button
             color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
-            target="_blank"
+            href="/"
+            // target="_blank"
             className={classes.navLink}
           >
             <i className={classes.socialIcons + " fab fa-instagram"} />

@@ -6,6 +6,8 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import CardsImages from "./footer-image.component";
+import FooterCard from "./footerCard.component";
+import centaur from "../../assets/Centaur.mp4"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -61,9 +63,12 @@ const LANGUAGES = [
   },
 ];
 
+
 function FooterComponent() {
   const classes = useStyles();
-  return <CardsImages />;
+  const footerCard = () => <FooterCard/>
+  return <CardsImages footerImage={centaur} />;
 }
 
 export default FooterComponent;
+ 

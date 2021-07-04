@@ -7,39 +7,33 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "../footer/Button.js";
 import Card from "../footer/Card.js";
 import CardBody from "../footer/CardBody.js";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import FooterFaq from "./footer-faq.component";
-import TypographyComponent from "../home/typography.component";
 
-import cardImagesStyles from "../../assets/cardImagesStyles";
-import footerLogo from "../../assets/Centaur.mp4";
+
+
+
+
+// import footerLogo from "../../assets/Centaur.mp4";
 
 const useStyles = makeStyles((theme) => ({
-  ...cardImagesStyles,
   textWhite: {
     "&, & *": {
       color: "#FFF",
     },
   },
+  videoTag: {
+    position: "fixed",
+    zIndex: -1,
+    width: "100%"
+  }
 }));
 
-export default function CardsImages() {
+export default function CardsImages({footerImage}) {
   const classes = useStyles();
   return (
     <div style={{ margin: 0 }}>
       <Card className={classes.textWhite}>
-        <div className={classes.cardImgOverlay}>
-          <TypographyComponent component="footer" className={classes.root}>
-            <Container className={classes.container}>
-              <Grid container spacing={5}>
-                <Grid item xs={6} sm={4} md={3}>
-                  <FooterFaq />
-                </Grid>
-              </Grid>
-            </Container>
-          </TypographyComponent>
-        </div>
+        {/* {children ? {children} : null} */}
+        
         <video
           className="videoTag"
           autoPlay
@@ -47,7 +41,7 @@ export default function CardsImages() {
           muted
           style={{ width: "100%" }}
         >
-          <source src={footerLogo} type="video/mp4" />
+          <source src={footerImage} type="video/mp4" />
         </video>
         {/* <img
           className={classes.cardImg}

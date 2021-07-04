@@ -15,24 +15,21 @@ import TypographyComponent from "./typography.component";
 
 const items = [
   {
-    src:
-      "https://demos.creative-tim.com/argon-design-system-pro/assets/img/faces/team-5.jpg",
+    src: "https://demos.creative-tim.com/argon-design-system-pro/assets/img/faces/team-5.jpg",
     altText: "Slide 1",
     caption: "",
     header: "",
     key: "1",
   },
   {
-    src:
-      "https://demos.creative-tim.com/argon-design-system-pro/assets/img/faces/team-4.jpg",
+    src: "https://demos.creative-tim.com/argon-design-system-pro/assets/img/faces/team-4.jpg",
     altText: "Slide 2",
     caption: "",
     header: "",
     key: "2",
   },
   {
-    src:
-      "https://demos.creative-tim.com/argon-design-system-pro/assets/img/faces/team-3.jpg",
+    src: "https://demos.creative-tim.com/argon-design-system-pro/assets/img/faces/team-3.jpg",
     altText: "Slide 3",
     caption: "",
     header: "",
@@ -84,7 +81,7 @@ function TestimonialsComponent(props) {
       /> */}
       </Container>
       <Row>
-        <Col md="3" className="mx-auto">
+        <Col md="10" className="mx-auto">
           <Container>
             <h3>Reviews</h3>
             <UncontrolledCarousel items={items} />
